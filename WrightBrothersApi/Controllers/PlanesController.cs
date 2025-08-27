@@ -42,6 +42,12 @@ namespace WrightBrothersApi.Controllers
             }
         };
 
+        [HttpGet("ping")]
+        public IActionResult Ping()
+        {
+            return Ok("Planes API is alive");
+        }
+
         [HttpGet]
         public ActionResult<List<Plane>> GetAll()
         {
