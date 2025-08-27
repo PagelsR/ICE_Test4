@@ -42,10 +42,16 @@ namespace WrightBrothersApi.Controllers
             }
         };
 
+        [HttpGet("ping")]
+        public IActionResult Ping()
+        {
+            return Ok("Planes API is alive");
+        }
+
         [HttpGet]
         public ActionResult<List<Plane>> GetAll()
         {
-            _logger.LogInformation("Debug: GET all ✈✈✈ NO PARAMS ✈✈✈");
+            _logger.LogInformation("Retrieving fleet inventory");
 
             return Ok(Planes);
         }
