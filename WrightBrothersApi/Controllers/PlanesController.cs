@@ -51,7 +51,7 @@ namespace WrightBrothersApi.Controllers
         [HttpGet]
         public ActionResult<List<Plane>> GetAll()
         {
-            _logger.LogInformation("Retrieving fleet inventory");
+            _logger.LogInformation("API log, fetching all planes");
 
             return Ok(Planes);
         }
